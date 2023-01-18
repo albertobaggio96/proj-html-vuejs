@@ -1,9 +1,11 @@
 <script>
 import JumboApp from './main-components/JumboApp.vue';
+import NewspapersReviews from './main-components/NewspapersReviews.vue'
 
 export default {
   components:{
-    JumboApp
+    JumboApp,
+    NewspapersReviews,
   },
   data(){
     return{
@@ -28,6 +30,10 @@ export default {
       <div class="col-lg-3 g-1" v-for="(alt, index) in advertisingImages">
         <img class="img-fluid" :src="getImgPath(index)" :alt="alt">
       </div>
+    </section>
+
+    <section id="newspapers-reviews" class="row">
+      <NewspapersReviews/>
     </section>
   </main>
 </template>
