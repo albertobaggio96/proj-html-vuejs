@@ -2,12 +2,14 @@
 import JumboApp from './main-components/JumboApp.vue';
 import NewspapersReviews from './main-components/NewspapersReviews.vue'
 import PizzaSpecials from './main-components/PizzaSpecials.vue';
+import DontJudgePizza from './main-components/DontJudgePizza.vue'
 
 export default {
   components:{
     JumboApp,
     NewspapersReviews,
     PizzaSpecials,
+    DontJudgePizza,
   },
   data(){
     return{
@@ -40,6 +42,10 @@ export default {
 
     <section id="pizza-specials" class="row">
       <PizzaSpecials/>
+    </section>
+
+    <section id="dont-judje-pizza" class="row">
+      <DontJudgePizza/>
     </section>
   </main>
 </template>
