@@ -1,13 +1,17 @@
 <script>
+import JumboApp from './main-components/JumboApp.vue';
+
 export default {
-  
+  components:{
+    JumboApp
+  }
 }
 </script>
 
 <template>
-  <div>
-    Main
-  </div>
+  <main>
+    <JumboApp/>
+  </main>
 </template>
 
 <style lang="">
