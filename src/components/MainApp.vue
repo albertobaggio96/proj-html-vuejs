@@ -1,11 +1,13 @@
 <script>
 import JumboApp from './main-components/JumboApp.vue';
 import NewspapersReviews from './main-components/NewspapersReviews.vue'
+import PizzaSpecials from './main-components/PizzaSpecials.vue';
 
 export default {
   components:{
     JumboApp,
     NewspapersReviews,
+    PizzaSpecials,
   },
   data(){
     return{
@@ -34,6 +36,10 @@ export default {
 
     <section id="newspapers-reviews" class="row">
       <NewspapersReviews/>
+    </section>
+
+    <section id="pizza-specials" class="row">
+      <PizzaSpecials/>
     </section>
   </main>
 </template>
