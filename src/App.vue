@@ -20,5 +20,8 @@
   <FooterApp/>
 </template>
 
-<style >
+<style lang="scss" >
+  @use "./style/partials/variables.scss" as *;
+  @use "./style/general.scss" as *;
+  @use "../node_modules/bootstrap/scss/bootstrap.scss" as *;
 </style>
