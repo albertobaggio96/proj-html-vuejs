@@ -38,7 +38,65 @@ export default {
       },
       ],
       clientsPath: "h1-clients-img-",
-      clientList: ["Cowboy", "Gordon", "Big Cheese", "Bludoos Bar", "Vegan"]
+      clientList: [{
+        name: "Cowboy",
+        path: 4,
+      },
+      {
+        name: "Gordon",
+        path: 3,
+      },
+      {
+        name: "Big Cheese",
+        path: 1,
+      },
+      {
+        name: "Bludoos Bar",
+        path: 2,
+      },
+      {
+        name: "Vegan",
+        path: 5,
+      }
+      ],
+      prodactsPath: "h3-product-img-",
+      prodactsList: [{
+        name: "Bismark",
+        path: "1a-100x100",
+        originalPrice: "$35.00",
+        price: "$30.00"
+      },
+      {
+        name: "Fior Di Zucca",
+        path: "2a-150x150",
+        originalPrice: "",
+        price: "$7.00 -$50.00"
+      },
+      {
+        name: "Valdostana",
+        path: "3a-150x150",
+        originalPrice: "",
+        price: "$55.00"
+      },
+      {
+        name: "Pizza Tartufata",
+        path: "4a-150x150",
+        originalPrice: "",
+        price: "$45.00"
+      },
+      {
+        name: "Francescana",
+        path: "5a-150x150",
+        originalPrice: "",
+        price: "$25.00"
+      },
+      {
+        name: "Campagnola",
+        path: "6a-100x100",
+        originalPrice: "",
+        price: "$50.00 - 95.00$"
+      },
+      ],
     }
   },
   methods: {
@@ -83,14 +141,45 @@ export default {
       <div class="container px-5">
         <div class="row p-5">
           <figure class="col " v-for="(client, index) in clientList">
-            <img class="img-fluid" :src="getImgPath(clientsPath, index + 1, 'png')" :alt="client">
+            <img class="img-fluid" :src="getImgPath(clientsPath, client.path, 'png')" :alt="client">
           </figure>
         </div>
       </div>
     </section>
+
+    <section id="best-pizza">
+      <article class="text-center">
+        <div>CHOOSE YOUR FLAVOR</div>
+        <h2>THE BEST PIZZA MENU IN TOWN</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit neque error soluta officia cumque dolores corrupti quidem totam illum.</p>
+      </article>
+      <ul class="d-flex p-0 flex-nowrap justify-content-between">
+        <li class="list-group-item" v-for="pizza in prodactsList">
+          <figure>
+            <img :src="getImgPath(prodactsPath, pizza.path, 'png')" :alt="pizza.name">
+          </figure>
+          <h3>{{ pizza.name.toUpperCase() }}</h3>
+          <div>{{ pizza.price }}</div>
+        </li>
+      </ul>
+      <article id="pizzas-list">
+
+      </article>
+    </section>
   </main>
 </template>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+    section#best-pizza{
+      ul{
+        overflow-x: auto;
+        li{
+          padding: 0 50px;
+        }
+        img{
+          width: 200px;
+        }
+      
+      }
+    }
 </style>
