@@ -1,5 +1,4 @@
 <script>
-import JumboApp from './main-components/JumboApp.vue';
 import NewspapersReviews from './main-components/NewspapersReviews.vue'
 import PizzaSpecials from './main-components/PizzaSpecials.vue';
 import DontJudgePizza from './main-components/DontJudgePizza.vue';
@@ -7,7 +6,6 @@ import BookingApp from './main-components/BookingApp.vue'
 
 export default {
   components: {
-    JumboApp,
     NewspapersReviews,
     PizzaSpecials,
     DontJudgePizza,
@@ -111,10 +109,7 @@ export default {
 
 <template>
   <main>
-    <section id="jumbo" class="row">
-      <JumboApp />
-    </section>
-
+    
     <section id="advertising-images" class="row">
       <article class="col-lg-3 g-1" v-for="(alt, index) in advertisingImagesList">
         <img class="img-fluid" :src="getImgPath(advertisingImagePath, index + 1, 'jpg')" :alt="alt">

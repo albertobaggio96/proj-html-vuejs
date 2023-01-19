@@ -24,4 +24,12 @@
   @use "./style/partials/variables.scss" as *;
   @use "./style/general.scss" as *;
   @use "../node_modules/bootstrap/scss/bootstrap.scss" as *;
+
+  .container{
+
+  }
+
+  button{
+    border: none;
+  }
 </style>
