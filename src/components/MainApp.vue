@@ -2,7 +2,8 @@
 import JumboApp from './main-components/JumboApp.vue';
 import NewspapersReviews from './main-components/NewspapersReviews.vue'
 import PizzaSpecials from './main-components/PizzaSpecials.vue';
-import DontJudgePizza from './main-components/DontJudgePizza.vue'
+import DontJudgePizza from './main-components/DontJudgePizza.vue';
+import BookingApp from './main-components/BookingApp.vue'
 
 export default {
   components: {
@@ -10,6 +11,7 @@ export default {
     NewspapersReviews,
     PizzaSpecials,
     DontJudgePizza,
+    BookingApp
   },
   data() {
     return {
@@ -162,9 +164,14 @@ export default {
           <div>{{ pizza.price }}</div>
         </li>
       </ul>
-      <article id="pizzas-list">
+    </section>
 
-      </article>
+    <section id="delish-pizza" class="row">
+      <PizzaSpecials/>
+    </section>
+
+    <section id="booking">
+      <BookingApp/>
     </section>
   </main>
 </template>
