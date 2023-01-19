@@ -31,7 +31,7 @@ export default {
       }
   
       .l-gray{
-        color: $light-grey;
+        color: $light-gray;
       }
       .quote-left{
         font-size: 100px;
