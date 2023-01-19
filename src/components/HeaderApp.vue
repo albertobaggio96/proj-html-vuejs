@@ -20,5 +20,7 @@ export default {
 </template>
 
 <style lang="scss">
-  
+  header{
+    background-image: url(../assets/img/bg-header.png);
+  }
 </style>
