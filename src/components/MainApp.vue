@@ -1,19 +1,15 @@
 <script>
 import JumboApp from './main-components/JumboApp.vue';
-import AdvertisingImages from "./main-components/AdvertisingImages.vue"
 import NewspapersReviews from './main-components/NewspapersReviews.vue'
 import PizzaSpecials from './main-components/PizzaSpecials.vue';
 import DontJudgePizza from './main-components/DontJudgePizza.vue'
-import TeamApp from './main-components/TeamApp.vue'
 
 export default {
   components: {
     JumboApp,
-    AdvertisingImages,
     NewspapersReviews,
     PizzaSpecials,
     DontJudgePizza,
-    TeamApp,
   },
   data() {
     return {
@@ -41,11 +37,13 @@ export default {
         role: "Manager"
       },
       ],
+      clientsPath: "h1-clients-img-",
+      clientList: ["Cowboy", "Gordon", "Big Cheese", "Bludoos Bar", "Vegan"]
     }
   },
   methods: {
-    getImgPath(imgPathstart, imgPathEnd = "") {
-      return new URL(`../assets/img/${imgPathstart}${imgPathEnd}.jpg`, import.meta.url).href;
+    getImgPath(imgPathstart, imgPathEnd = "", fileFormat) {
+      return new URL(`../assets/img/${imgPathstart}${imgPathEnd}.${fileFormat}`, import.meta.url).href;
     },
   }
 }
@@ -59,7 +57,7 @@ export default {
 
     <section id="advertising-images" class="row">
       <article class="col-lg-3 g-1" v-for="(alt, index) in advertisingImagesList">
-        <img class="img-fluid" :src="getImgPath(advertisingImagePath, index + 1)" :alt="alt">
+        <img class="img-fluid" :src="getImgPath(advertisingImagePath, index + 1, 'jpg')" :alt="alt">
       </article>
     </section>
 
@@ -77,13 +75,17 @@ export default {
 
     <section id="team-presentation" class="row">
       <article class="col-lg-3 px-0" v-for="(person) in teamNames">
-        <img class="img-fluid" :src="getImgPath(teamPath, person.path)" :alt="person.name">
+        <img class="img-fluid" :src="getImgPath(teamPath, person.path, 'jpg')" :alt="person.name">
       </article>
     </section>
 
-    <section id="logos">
-      <div class="container">
-        <div class=""></div>
+    <section id="clients-logo">
+      <div class="container px-5">
+        <div class="row p-5">
+          <figure class="col " v-for="(client, index) in clientList">
+            <img class="img-fluid" :src="getImgPath(clientsPath, index + 1, 'png')" :alt="client">
+          </figure>
+        </div>
       </div>
     </section>
   </main>
