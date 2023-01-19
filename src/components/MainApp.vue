@@ -116,7 +116,7 @@ export default {
       </article>
     </section>
 
-    <section id="newspapers-reviews" class="row">
+    <section id="newspapers-reviews" class="row px-3">
       <NewspapersReviews />
     </section>
 
@@ -172,6 +172,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    section#newspapers-reviews{
+      background-image: url(../assets/img/h3-testimonials-bckgrnd.jpg);
+      background-size: cover;
+      background-position: center;  
+    }
+    
     section#best-pizza{
       ul{
         overflow-x: auto;

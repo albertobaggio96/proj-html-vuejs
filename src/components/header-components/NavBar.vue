@@ -29,7 +29,9 @@ export default {
 
 <style lang="scss" scoped>
   @use "../../style/partials/variables" as *;
-
+  nav{
+    height: 115px;
+  }
   button{
     background-color: $orange-button;
     color: $white;

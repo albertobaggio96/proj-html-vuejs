@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <header class="bg-black text-white p-3">
+  <header class="bg-black text-white pt-3 px-3">
     <NavBar/>
     <section id="jumbo" class="row">
       <JumboApp />
@@ -22,5 +22,6 @@ export default {
 <style lang="scss">
   header{
     background-image: url(../assets/img/bg-header.png);
+    font-family: 'Oswald', sans-serif;
   }
 </style>
