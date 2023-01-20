@@ -168,7 +168,7 @@ export default {
       <DelishPizza />
     </section>
 
-    <section id="booking">
+    <section id="booking" class="my-2">
       <BookingApp />
     </section>
 
