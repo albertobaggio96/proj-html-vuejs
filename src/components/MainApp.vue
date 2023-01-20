@@ -116,7 +116,7 @@ export default {
       <article class="col-lg-3 g-1 position-relative" v-for="(alt, index) in advertisingImagesList">
         <img class="img-fluid" :src="getImgPath(advertisingImagePath, index + 1, 'jpg')" :alt="alt">
         <div class="mouse-hover position-absolute top-0 w-100 h-100 d-flex justify-content-center align-items-center">
-          <font-awesome-icon icon="fa-regular fa-eye" class="fs-3 fa-hover p-3 rounded-circle"/>
+          <font-awesome-icon icon="fa-regular fa-eye" class="fs-3 fa-hover p-3 rounded-circle text-white"/>
         </div>
       </article>
     </section>
