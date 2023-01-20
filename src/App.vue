@@ -2,17 +2,22 @@
   import HeaderApp from './components/HeaderApp.vue';
   import MainApp from './components/MainApp.vue';
   import FooterApp from './components/FooterApp.vue';
+  import FixedApp from './components/FixedApp.vue';
 
   export default{
     components : {
       HeaderApp,
       MainApp,
-      FooterApp
+      FooterApp,
+      FixedApp
     }
   }
 </script>
 
 <template>
+
+  <FixedApp/>
+
   <HeaderApp/>
 
   <MainApp/>
