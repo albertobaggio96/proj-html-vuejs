@@ -113,8 +113,11 @@ export default {
   <main>
 
     <section id="advertising-images" class="row">
-      <article class="col-lg-3 g-1" v-for="(alt, index) in advertisingImagesList">
+      <article class="col-lg-3 g-1 position-relative" v-for="(alt, index) in advertisingImagesList">
         <img class="img-fluid" :src="getImgPath(advertisingImagePath, index + 1, 'jpg')" :alt="alt">
+        <div class="mouse-hover position-absolute top-0 w-100 h-100 d-flex justify-content-center align-items-center">
+          <font-awesome-icon icon="fa-regular fa-eye" class="fs-3 fa-hover p-3 rounded-circle"/>
+        </div>
       </article>
     </section>
 
@@ -131,8 +134,22 @@ export default {
     </section>
 
     <section id="team-presentation" class="row">
-      <article class="col-lg-3 px-0" v-for="(person) in teamNames">
+      <article class="col-lg-3 px-0 position-relative" v-for="(person) in teamNames">
         <img class="img-fluid" :src="getImgPath(teamPath, person.path, 'jpg')" :alt="person.name">
+        <div class="mouse-hover position-absolute top-0 w-100 h-100 d-flex justify-content-center align-items-center">
+          <div class="fs-3 fa-hover p-3 d-flex justify-content-center align-items-center text-center text-white person">
+            <article>
+              <h2 class="fw-bold fa-hover">{{ person.name.toUpperCase()}}</h2>
+              <div class="fa-hover fs-5">{{ person.role }}</div>
+              <div class="fa-hover">
+                <font-awesome-icon icon="fa-brands fa-instagram" class="px-2 fs-5"/>
+                <font-awesome-icon icon="fa-brands fa-twitter" class="px-2 fs-5"/>
+                <font-awesome-icon icon="fa-brands fa-facebook-f" class="px-2 fs-5"/>
+              </div>
+            </article>
+
+          </div> 
+        </div>
       </article>
     </section>
 
@@ -177,6 +194,28 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/partials/variables.scss" as *;
+  article.position-relative{
+    div.mouse-hover,
+    .fa-hover{
+          display: none;
+    }
+    .person{
+      width: 90%;
+      height: 90%;
+    }
+
+    &:hover{
+      div.mouse-hover{
+          background-color: white;
+          display: block;
+      }
+      .fa-hover{
+        display: block;
+        background-color: $orange-button;
+      }
+    }
+  }
+
 
 section#newspapers-reviews {
   background-image: url(../assets/img/h3-testimonials-bckgrnd.jpg);

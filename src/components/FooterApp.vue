@@ -64,7 +64,12 @@ export default {
               <div>9.00 - 22.00</div>
             </li>
           </ul>
-          <h4>FOLLOW US: </h4>
+          <h4>FOLLOW US: 
+            <font-awesome-icon icon="fa-brands fa-twitter"  class="px-1 text-white"/>
+            <font-awesome-icon icon="fa-brands fa-facebook-f"  class="px-1 text-white"/>
+            <font-awesome-icon icon="fa-brands fa-instagram"  class="px-1 text-white"/>
+            <font-awesome-icon icon="fa-brands fa-linkedin-in"  class="px-1 text-white"/>
+          </h4>
         </div>
         
         <div class="col-lg-4 pe-0">
