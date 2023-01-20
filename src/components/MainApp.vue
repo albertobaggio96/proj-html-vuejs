@@ -197,7 +197,8 @@ export default {
   article.position-relative{
     div.mouse-hover,
     .fa-hover{
-          display: none;
+          opacity: 0;
+          transition: .5s;
     }
     .person{
       width: 90%;
@@ -207,10 +208,10 @@ export default {
     &:hover{
       div.mouse-hover{
           background-color: white;
-          display: block;
+          opacity: 1;
       }
       .fa-hover{
-        display: block;
+        opacity: 1;
         background-color: $orange-button;
       }
     }
