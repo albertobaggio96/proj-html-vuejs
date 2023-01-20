@@ -126,7 +126,7 @@ export default {
       <PizzaSpecials />
     </section>
 
-    <section id="dont-judje-pizza" class="row">
+    <section id="dont-judge-pizza" class="row">
       <DontJudgePizza />
     </section>
 
@@ -171,6 +171,7 @@ export default {
     <section id="booking">
       <BookingApp />
     </section>
+
   </main>
 </template>
 
@@ -215,6 +216,12 @@ section#best-pizza {
     font-size: .8rem;
   }
   
+}
+
+section#booking{
+  padding: 80px;
+  background-image: url(../assets/img/h3-background-img-3.jpg);
+  background-size: cover;
 }
 
 </style>
