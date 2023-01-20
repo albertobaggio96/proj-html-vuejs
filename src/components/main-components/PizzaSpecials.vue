@@ -66,7 +66,7 @@ p{
 }
 
 .price{
-  color: $price-special-menu;
+  color: $red-orange;
 }
   
 

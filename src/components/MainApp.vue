@@ -2,6 +2,7 @@
 import NewspapersReviews from './main-components/NewspapersReviews.vue'
 import PizzaSpecials from './main-components/PizzaSpecials.vue';
 import DontJudgePizza from './main-components/DontJudgePizza.vue';
+import DelishPizza from './main-components/DelishPizza.vue';
 import BookingApp from './main-components/BookingApp.vue'
 
 export default {
@@ -9,6 +10,7 @@ export default {
     NewspapersReviews,
     PizzaSpecials,
     DontJudgePizza,
+    DelishPizza,
     BookingApp
   },
   data() {
@@ -163,7 +165,7 @@ export default {
     </section>
 
     <section id="delish-pizza" class="row">
-      <PizzaSpecials />
+      <DelishPizza />
     </section>
 
     <section id="booking">

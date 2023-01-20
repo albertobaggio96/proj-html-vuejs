@@ -27,6 +27,7 @@
 
   body{
     overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
   }
   button{
     border: none;
