@@ -109,7 +109,7 @@ export default {
 
 <template>
   <main>
-    
+
     <section id="advertising-images" class="row">
       <article class="col-lg-3 g-1" v-for="(alt, index) in advertisingImagesList">
         <img class="img-fluid" :src="getImgPath(advertisingImagePath, index + 1, 'jpg')" :alt="alt">
@@ -145,49 +145,74 @@ export default {
     </section>
 
     <section id="best-pizza">
-      <article class="text-center">
-        <div>CHOOSE YOUR FLAVOR</div>
-        <h2>THE BEST PIZZA MENU IN TOWN</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit neque error soluta officia cumque dolores corrupti quidem totam illum.</p>
+      <article class="text-center mx-auto pb-5">
+        <div class="orange-text fw-bold">CHOOSE YOUR FLAVOR</div>
+        <h2 class="fw-bolder mb-3">THE BEST PIZZA MENU IN TOWN</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit neque error soluta officia cumque dolores
+          corrupti quidem totam illum.</p>
       </article>
-      <ul class="d-flex p-0 flex-nowrap justify-content-between">
+      <ul class="d-flex p-0 flex-nowrap justify-content-between text-center">
         <li class="list-group-item" v-for="pizza in prodactsList">
           <figure>
             <img :src="getImgPath(prodactsPath, pizza.path, 'png')" :alt="pizza.name">
           </figure>
-          <h3>{{ pizza.name.toUpperCase() }}</h3>
-          <div>{{ pizza.price }}</div>
+          <h3 class="fw-bold">{{ pizza.name.toUpperCase() }}</h3>
+          <div class="fw-bold orange-text">{{ pizza.price }}</div>
         </li>
       </ul>
     </section>
 
     <section id="delish-pizza" class="row">
-      <PizzaSpecials/>
+      <PizzaSpecials />
     </section>
 
     <section id="booking">
-      <BookingApp/>
+      <BookingApp />
     </section>
   </main>
 </template>
 
 <style lang="scss" scoped>
-    section#newspapers-reviews{
-      background-image: url(../assets/img/h3-testimonials-bckgrnd.jpg);
-      background-size: cover;
-      background-position: center;  
+@use "../style/partials/variables.scss" as *;
+
+section#newspapers-reviews {
+  background-image: url(../assets/img/h3-testimonials-bckgrnd.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section#clients-logo {
+  background-color: $bg-super-light-gary;
+}
+
+section#best-pizza {
+
+  article {
+    width: 600px;
+    padding-top: 100px;
+    p {
+      color: $gray-special;
     }
-    
-    section#best-pizza{
-      ul{
-        overflow-x: auto;
-        li{
-          padding: 0 50px;
-        }
-        img{
-          width: 200px;
-        }
-      
+  }
+  ul {
+    overflow-x: auto;
+    margin-bottom: 100px;
+      li {
+      padding: 0 50px;
+      img {
+        width: 200px;
+      }
+      h3{
+        font-size: 1rem;
+        color: $gold-text;
       }
     }
+  }
+  .orange-text {
+    color: $orange-text;
+    font-size: .8rem;
+  }
+  
+}
+
 </style>

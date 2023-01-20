@@ -25,6 +25,9 @@
   @use "./style/general.scss" as *;
   @use "../node_modules/bootstrap/scss/bootstrap.scss" as *;
 
+  body{
+    overflow-x: hidden;
+  }
   button{
     border: none;
   }
